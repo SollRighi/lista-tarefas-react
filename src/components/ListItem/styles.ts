@@ -1,0 +1,37 @@
+import styled from 'styled-components'
+
+type ContainerProps = {
+    done: boolean
+}
+
+export const Container = styled.div(({done}: ContainerProps) => (
+    `
+        display: flex;
+        background-color: #20212C;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        align-itens: center;
+
+        input {
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+        }
+
+        label {
+            color: #CCC;
+            text-decoration: ${done ? 'line-through' : 'initial'}
+        }
+
+        button {
+            border: 0;
+            background: transparent;
+            outline: 0;
+            color: #CC0000;
+            font-size: 18px;
+            position: absolute;
+            left: 1160px;
+        }
+    `
+))
